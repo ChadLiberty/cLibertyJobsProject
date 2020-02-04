@@ -18,4 +18,10 @@ def search_jobs(page_response):
         print("id: {}\tstatus: {}".format(job_listings, request.status_code))
 
 main()
-
+#this was supposed to write/save the info to a jobListing text file
+def save_file(request):
+    file = open("jobListing.txt")
+    for i in range(200):
+        file.write(request)
+    save_file()
+    save_file(request)
