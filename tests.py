@@ -29,12 +29,23 @@ def test_save_data():                               #changed to see if data is i
     demo_data = {'id': 1234, 'type': "Testable"}
     list_data = []
     list_data.append(demo_data)
-    main.make_jobs_table()
+    main.get_github_jobs_data()
     #the save puts a newline at the end
-    assert f"{str(demo_data)}\n" in main.make_jobs_table()
+    assert f"{str(demo_data)}\n" in main.get_github_jobs_data()
+
+def test_save_data2():
+    demo_data2 = {'id': 2345, 'type': "Testable"}
+    append_jobs = []
+    append_jobs.append(demo_data2)
+    main.get_stackOverflow_jobs()
+    assert f"{str(demo_data2)}\n" in main.get_stackOverflow_jobs()
 
 def table_exists():
     test_table =  f'''SELECT id, type, url, created_at, company, company_url, location, title, description
+    FROM JOBS'''
+
+def table2_exists():
+    test_table2 = f'''SELECT id, title, link, description, url, category, author 
     FROM JOBS'''
 
 def db_method_works():
