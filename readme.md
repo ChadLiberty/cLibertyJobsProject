@@ -1,6 +1,7 @@
 1. Chad Liberty
-2. requires installation of sqlite and feedparser
-3. The project should take the data from StackOverflow and store it in 
-another data table 
-4. I took Professor Santore's code from Sprint1 and Sprint2 and built upon it for sprint3. I created two seperate tables, parsing
-the second one because it was an RSS feed. 
+2. requires installation of sqlite and feedparser. Also uses plotly and geopy.
+3. The project should parse through the database and get the latitudes and longitudes using geopy. 
+Then, it should show the data in a map on plotly. 
+4. I had to backtrack a little because I could not get information from two tables in one
+database. So I had to just use the Github jobs database. I had some trouble getting 
+the plotly map to display the data. 

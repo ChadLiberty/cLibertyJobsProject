@@ -51,3 +51,10 @@ def table2_exists():
 def db_method_works():
     demo_data = {'id': 1234, 'type': "Testable"}
     #send to data table
+
+def detail_description():
+    test_description = {"random description"}
+    assert test_description in main
+
+def filter():
+#assert that filter would change data visualization
